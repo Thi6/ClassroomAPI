@@ -43,8 +43,22 @@ public class ClassroomServiceTest {
 		cmr.getClassroomMap().put(2, classroom2);
 		assertEquals("{\"1\":{\"classroomID\":1,\"trainer\":\"Matt Hunt\"},\"2\":{\"classroomID\":2,\"trainer\":\"Chester Gardner\"}}", cmr.getAllClassrooms());
 	}
-
-
+	
+	@Ignore
+	@Test
+	public void addClassroomTest() {
+		String classToAdd = util.getJSONForObject(classroom1);
+		assertEquals(cmr.createClassroom(classToAdd), "Classroom successfully created");
+		assertEquals(cmr.getClassroomMap().size(), 1);
+	}
+	@Ignore
+	@Test
+	public void addClassroomTest2() {
+	
+		assertEquals(cmr.createClassroom(util.getJSONForObject(classroom1)), "Classroom successfully created");
+		assertEquals(cmr.createClassroom(util.getJSONForObject(classroom2)), "Classroom successfully created");
+		assertEquals(cmr.getClassroomMap().size(), 2);
+	}
 
 	
 }

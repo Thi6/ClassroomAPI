@@ -4,4 +4,5 @@ public interface ClassroomRepository {
 	
 	String getAllClassrooms();
 	
+	String createClassroom(String account);
 }
