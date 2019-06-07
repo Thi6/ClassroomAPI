@@ -1,17 +1,19 @@
 package com.qa.persistence.repository;
 
 import java.util.Collection;
+import static javax.transaction.Transactional.TxType.SUPPORTS;
 
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.transaction.Transactional;
 
 import com.qa.persistence.domain.Classroom;
 import com.qa.util.JSONUtil;
 
-
+@Transactional(SUPPORTS)
 @Default
 public class ClassroomDBRepository implements ClassroomRepository{
 	

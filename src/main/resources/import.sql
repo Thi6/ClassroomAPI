@@ -1,6 +1,3 @@
-INSERT INTO MOVIE (id, title, ageRating) VALUES (1, 'Saw', '18')
-INSERT INTO MOVIE (id, title, ageRating) VALUES (2, 'Up', 'U')
-INSERT INTO MOVIE (id, title, ageRating) VALUES (3, 'Hop', 'U')
-INSERT INTO MOVIE (id, title, ageRating) VALUES (4, 'Some Film', 'PG')
+INSERT INTO CLASSROOM(classroomID, trainer) VALUES (1, 'Matt Hunt')
+INSERT INTO CLASSROOM(classroomID, trainer) VALUES (2, 'Chester Gardner')
 
-INSERT INTO SUBMOVIE (id, title, ageRating, subAttribute) VALUES (4, 'Some Film', 'PG', 'Sub')
