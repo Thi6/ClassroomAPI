@@ -9,9 +9,16 @@ public class ClassroomServiceImpl implements ClassroomService{
 	@Inject
 	private ClassroomRepository classroomRepo;
 	
+	@Override
+	public String createClassroom(String classroom) {
+		return classroomRepo.createClassroom(classroom);
+	}
+
 	
 	public String getAllClassrooms() {
 		return classroomRepo.getAllClassrooms();
 	}
 
+
+	
 }
